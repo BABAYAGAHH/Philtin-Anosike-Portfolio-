@@ -26,6 +26,10 @@ function normalizeOrigin(value: string | null) {
   }
 }
 
+function getRequestOrigin(request: NextRequest) {
+  return normalizeOrigin(request.nextUrl.origin);
+}
+
 function getForwardedIp(value: string | null) {
   if (!value) {
     return "";
@@ -48,12 +52,18 @@ export function getRequestContext(request: NextRequest): FormRequestContext {
 }
 
 export function hasTrustedFormOrigin(request: NextRequest) {
-  if (serverEnv.allowedOrigins.length === 0) {
+  const requestOrigin = normalizeOrigin(request.headers.get("origin"));
+
+  if (!requestOrigin) {
     return true;
   }
 
-  const requestOrigin = normalizeOrigin(request.headers.get("origin"));
-  return requestOrigin ? serverEnv.allowedOrigins.includes(requestOrigin) : true;
+  const currentOrigin = getRequestOrigin(request);
+
+  return (
+    requestOrigin === currentOrigin ||
+    serverEnv.allowedOrigins.includes(requestOrigin)
+  );
 }
 
 export function isJsonRequest(request: NextRequest) {
@@ -71,6 +81,7 @@ export function formJson<FieldName extends string>(
 ) {
   const headers = new Headers(init?.headers);
   headers.set("Cache-Control", "no-store");
+  headers.set("X-Robots-Tag", "noindex, nofollow");
 
   return NextResponse.json(body, {
     ...init,
