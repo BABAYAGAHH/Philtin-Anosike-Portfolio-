@@ -1,0 +1,16 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#171614"/>
+  <rect x="42" y="42" width="1116" height="546" rx="36" fill="url(#paint0_linear)"/>
+  <circle cx="918" cy="200" r="148" fill="#AF8A4E" fill-opacity="0.18"/>
+  <circle cx="972" cy="402" r="86" fill="#F3E7D3" fill-opacity="0.14"/>
+  <text x="106" y="158" fill="#D9CDBC" font-family="Arial, sans-serif" font-size="20" letter-spacing="7">PHILTINANOSIKE.COM</text>
+  <text x="106" y="278" fill="#FBF8F2" font-family="Georgia, serif" font-size="72">Philtin Anosike</text>
+  <text x="106" y="340" fill="#E5DAC6" font-family="Arial, sans-serif" font-size="28">Entrepreneur | Systems Thinker | Advocate for Disciplined Leadership</text>
+  <text x="106" y="420" fill="#FBF8F2" font-family="Georgia, serif" font-size="44">Calm thinking. Structured execution. Long-term vision.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="126" y1="64" x2="1102" y2="582" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26231F"/>
+      <stop offset="1" stop-color="#47392A"/>
+    </linearGradient>
+  </defs>
+</svg>

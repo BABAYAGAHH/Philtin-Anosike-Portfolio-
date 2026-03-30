@@ -1,0 +1,16 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="56" fill="#151412"/>
+  <rect x="58" y="58" width="1084" height="784" rx="40" fill="url(#paint0_linear)"/>
+  <circle cx="604" cy="424" r="176" fill="#AF8A4E" fill-opacity="0.18"/>
+  <circle cx="604" cy="424" r="84" fill="rgba(255,255,255,0.1)"/>
+  <path d="M586 374L670 424L586 474V374Z" fill="#F8F3EA"/>
+  <text x="104" y="112" fill="#D8CCBC" font-family="Arial, sans-serif" font-size="20" letter-spacing="6">FEATURED REFLECTION</text>
+  <text x="104" y="786" fill="#FAF7F2" font-family="Georgia, serif" font-size="42">Calm Thinking Under Pressure</text>
+  <text x="104" y="826" fill="#D8CCBC" font-family="Arial, sans-serif" font-size="24">A measured voice for uncertain moments.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="122" y1="88" x2="1034" y2="822" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24211D"/>
+      <stop offset="1" stop-color="#5D472A"/>
+    </linearGradient>
+  </defs>
+</svg>

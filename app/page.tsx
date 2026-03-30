@@ -1,0 +1,246 @@
+import Image from "next/image";
+
+import { ArticleCard } from "@/components/articles/ArticleCard";
+import { NewsletterForm } from "@/components/forms/NewsletterForm";
+import { VideoCard } from "@/components/media/VideoCard";
+import { ProjectCard } from "@/components/projects/ProjectCard";
+import { CTASection } from "@/components/sections/CTASection";
+import { SectionHeading } from "@/components/sections/SectionHeading";
+import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
+import { Badge } from "@/components/ui/Badge";
+import { Container } from "@/components/ui/Container";
+import { PrimaryButton } from "@/components/ui/PrimaryButton";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { articles } from "@/content/articles";
+import { featuredMedia } from "@/content/media";
+import { projects } from "@/content/projects";
+import { siteConfig } from "@/content/site";
+import { createMetadata } from "@/lib/seo";
+
+const heroDetails = [
+  {
+    label: "Built from",
+    value: "Business structure"
+  },
+  {
+    label: "Operating base",
+    value: "Port Harcourt"
+  },
+  {
+    label: "Orientation",
+    value: "Long-term vision"
+  }
+] as const;
+
+export const metadata = createMetadata({
+  title: "Home",
+  description:
+    "A premium personal platform for Philtin Anosike, sharing ideas on leadership, systems thinking, entrepreneurship, and long-term national development.",
+  path: "/"
+});
+
+export default function HomePage() {
+  const featuredIdeas = articles.filter((article) => article.featured).slice(0, 3);
+  const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+
+  return (
+    <>
+      <section className="relative overflow-hidden pb-24 pt-10 sm:pb-28 sm:pt-16 lg:pb-32 lg:pt-20">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[42rem] bg-[radial-gradient(circle_at_18%_14%,rgba(175,138,78,0.16),transparent_34%),radial-gradient(circle_at_84%_18%,rgba(255,255,255,0.82),transparent_24%)]" />
+
+        <Container className="relative grid gap-14 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center">
+          <AnimatedReveal className="max-w-3xl lg:pr-8">
+            <div className="mb-6 flex flex-wrap items-center gap-3">
+              <Badge>Premium personal platform</Badge>
+              <span className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.64]">
+                Port Harcourt, Nigeria
+              </span>
+            </div>
+
+            <h1 className="font-serif text-[3.85rem] leading-[0.88] text-foreground sm:text-[5.1rem] lg:text-[6rem]">
+              {siteConfig.name}
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-[0.78rem] uppercase tracking-[0.34em] text-stoneText/[0.7] sm:text-[0.82rem]">
+              {siteConfig.title}
+            </p>
+
+            <p className="mt-8 max-w-2xl font-serif text-[2.2rem] leading-[1.03] text-foreground sm:text-[2.85rem] lg:text-[3.3rem]">
+              {siteConfig.statement}
+            </p>
+
+            <p className="mt-6 max-w-2xl text-[1.02rem] leading-8 text-stoneText sm:text-lg">
+              {siteConfig.heroSupport}
+            </p>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <PrimaryButton href="/ideas">Explore Ideas</PrimaryButton>
+              <SecondaryButton href="/projects">View Projects</SecondaryButton>
+            </div>
+
+            <div className="mt-12 grid gap-3 sm:grid-cols-3">
+              {heroDetails.map((detail) => (
+                <div className="paper-panel p-4 sm:p-5" key={detail.label}>
+                  <p className="text-[0.68rem] uppercase tracking-[0.26em] text-stoneText/[0.64]">
+                    {detail.label}
+                  </p>
+                  <p className="mt-3 font-serif text-xl leading-tight text-foreground">
+                    {detail.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </AnimatedReveal>
+
+          <AnimatedReveal className="relative lg:justify-self-end" delay={0.08}>
+            <div className="relative overflow-hidden rounded-[3rem] border border-white/70 bg-[linear-gradient(180deg,#181715_0%,#27231e_100%)] p-4 shadow-[0_40px_120px_rgba(24,23,21,0.22)] sm:p-6">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(175,138,78,0.22),transparent_26%)]" />
+
+              <div className="absolute left-6 top-6 z-20">
+                <Badge tone="outline">Structured Thinking. Disciplined Action.</Badge>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]">
+                <div className="absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),transparent)]" />
+                <div className="relative h-[25rem] sm:h-[35rem]">
+                  <Image
+                    alt="Portrait placeholder for Philtin Anosike"
+                    className="scale-[1.01] object-cover object-center"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 42vw, 100vw"
+                    src="/portrait-placeholder.svg"
+                  />
+                </div>
+              </div>
+
+              <div className="relative mt-5 grid gap-4 rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))] p-5 text-white/[0.84] backdrop-blur-xl sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+                <div>
+                  <p className="text-[0.68rem] uppercase tracking-[0.28em] text-white/[0.55]">
+                    Port Harcourt, Nigeria
+                  </p>
+                  <p className="mt-3 max-w-md font-serif text-[1.75rem] leading-tight">
+                    Calm, credible leadership shaped by structure rather than noise.
+                  </p>
+                </div>
+                <div className="rounded-[1.35rem] border border-white/10 bg-white/[0.06] px-4 py-4">
+                  <p className="text-[0.68rem] uppercase tracking-[0.24em] text-white/[0.55]">
+                    Focus
+                  </p>
+                  <p className="mt-2 text-sm leading-6">
+                    Entrepreneurship, systems, and disciplined execution.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="section-space-sm">
+        <Container>
+          <AnimatedReveal className="paper-panel grid gap-8 p-8 sm:p-10 lg:grid-cols-[13rem_minmax(0,1fr)_auto] lg:items-end">
+            <div className="border-b border-border/70 pb-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.64]">
+                Bio snapshot
+              </p>
+              <p className="mt-3 font-serif text-2xl leading-tight text-foreground">
+                Built with structure.
+              </p>
+            </div>
+            <div className="max-w-3xl">
+              <h2 className="font-serif text-4xl leading-[0.98] text-foreground sm:text-5xl">
+                Entrepreneurial discipline with a long horizon.
+              </h2>
+              <p className="mt-5 text-base leading-8 text-stoneText sm:text-lg">
+                {siteConfig.bioSnapshot}
+              </p>
+            </div>
+            <SecondaryButton href="/about">Read Full Story</SecondaryButton>
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="section-space">
+        <Container>
+          <SectionHeading
+            eyebrow="Featured ideas"
+            title="Clear thinking for leadership, business, and national development."
+            description="Editorial reflections built around accountability, structure, and long-term seriousness."
+          />
+          <div className="mt-14 grid gap-6 xl:grid-cols-3">
+            {featuredIdeas.map((article) => (
+              <ArticleCard article={article} key={article.slug} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <SecondaryButton href="/ideas">Explore All Articles</SecondaryButton>
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-space bg-[linear-gradient(180deg,#171614_0%,#221f1b_100%)] text-white">
+        <Container>
+          <div className="mb-12 max-w-3xl">
+            <p className="text-[0.72rem] uppercase tracking-[0.28em] text-white/[0.55]">
+              Featured video
+            </p>
+            <h2 className="mt-4 font-serif text-4xl leading-[0.98] sm:text-5xl lg:text-[3.65rem]">
+              A calm voice in high-pressure conversations.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-white/[0.72] sm:text-lg">
+              A short reflection on why calm thinking is one of the most underrated tools in leadership and decision-making.
+            </p>
+          </div>
+          <VideoCard entry={featuredMedia} featured />
+        </Container>
+      </section>
+
+      <section className="section-space">
+        <Container>
+          <SectionHeading
+            eyebrow="Current projects"
+            title="Execution that turns structure into visible impact."
+            description="Selected initiatives focused on mobility, community support, and practical development."
+          />
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <SecondaryButton href="/projects">View All Projects</SecondaryButton>
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-space">
+        <Container>
+          <AnimatedReveal className="paper-panel rounded-[2.6rem] p-8 sm:p-10 lg:grid lg:grid-cols-[minmax(0,1fr)_26rem] lg:gap-10 lg:items-end">
+            <div className="max-w-3xl">
+              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.64]">
+                Insights from Philtin
+              </p>
+              <h2 className="mt-4 font-serif text-4xl leading-[0.98] text-foreground sm:text-5xl lg:text-[3.5rem]">
+                Thoughts on leadership, business, and national development.
+              </h2>
+              <p className="mt-5 text-base leading-8 text-stoneText sm:text-lg">
+                Shared with clarity and consistency for people building with seriousness.
+              </p>
+            </div>
+            <NewsletterForm className="mt-8 lg:mt-0" compact />
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <CTASection
+        description="Explore the writing, projects, and reflections shaping a disciplined long-term platform."
+        primaryHref="/contact"
+        primaryLabel="Start a conversation"
+        secondaryHref="/newsletter"
+        secondaryLabel="Join the newsletter"
+        title="A serious digital home for ideas, execution, and future leadership."
+      />
+    </>
+  );
+}

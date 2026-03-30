@@ -1,0 +1,18 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="56" fill="#201E1B"/>
+  <rect x="56" y="56" width="1088" height="788" rx="42" fill="url(#paint0_linear)"/>
+  <circle cx="312" cy="356" r="120" fill="#AF8A4E" fill-opacity="0.18"/>
+  <circle cx="548" cy="408" r="92" fill="#EEE2CE" fill-opacity="0.16"/>
+  <circle cx="768" cy="350" r="136" fill="#F5E9D7" fill-opacity="0.12"/>
+  <circle cx="930" cy="428" r="88" fill="#AF8A4E" fill-opacity="0.24"/>
+  <rect x="116" y="582" width="968" height="160" rx="36" fill="rgba(255,255,255,0.06)"/>
+  <text x="116" y="118" fill="#D8CCBC" font-family="Arial, sans-serif" font-size="20" letter-spacing="6">COMMUNITY INITIATIVE</text>
+  <text x="144" y="662" fill="#FAF7F2" font-family="Georgia, serif" font-size="40">Community Transport Support</text>
+  <text x="144" y="708" fill="#D8CCBC" font-family="Arial, sans-serif" font-size="24">Practical mobility thinking rooted in local realities.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="112" y1="84" x2="1048" y2="824" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B2622"/>
+      <stop offset="1" stop-color="#4F4438"/>
+    </linearGradient>
+  </defs>
+</svg>

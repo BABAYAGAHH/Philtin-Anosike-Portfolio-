@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="56" fill="#171614"/>
+  <rect x="56" y="56" width="1088" height="788" rx="42" fill="url(#paint0_linear)"/>
+  <path d="M192 668L424 430L576 542L808 286L1008 438" stroke="#E6D8C1" stroke-opacity="0.5" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="424" cy="430" r="42" fill="#AF8A4E"/>
+  <circle cx="576" cy="542" r="42" fill="#D7C4A4"/>
+  <circle cx="808" cy="286" r="42" fill="#F5EEE3" fill-opacity="0.6"/>
+  <rect x="116" y="128" width="360" height="36" rx="18" fill="#AF8A4E" fill-opacity="0.2"/>
+  <text x="136" y="150" fill="#E2D5C2" font-family="Arial, sans-serif" font-size="20" letter-spacing="6">DEVELOPMENT EFFORTS</text>
+  <text x="118" y="784" fill="#FAF7F2" font-family="Georgia, serif" font-size="42">Practical growth with long-term structure</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="102" y1="90" x2="1025" y2="812" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26231F"/>
+      <stop offset="1" stop-color="#41372D"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1400" rx="64" fill="#171614"/>
+  <rect x="56" y="56" width="1088" height="1288" rx="44" fill="url(#paint0_linear)" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="600" cy="520" r="214" fill="url(#paint1_radial)"/>
+  <path d="M368 1134C392 948 468 852 600 852C732 852 808 948 832 1134" fill="#EEE6DA" fill-opacity="0.12"/>
+  <path d="M457 640C457 557.709 521.709 493 604 493C686.291 493 751 557.709 751 640V685C751 767.291 686.291 832 604 832C521.709 832 457 767.291 457 685V640Z" fill="#F4E9D8" fill-opacity="0.18"/>
+  <rect x="132" y="124" width="196" height="36" rx="18" fill="#AF8A4E" fill-opacity="0.2"/>
+  <rect x="132" y="1154" width="936" height="120" rx="32" fill="rgba(255,255,255,0.06)"/>
+  <text x="172" y="147" fill="#E8DDC8" font-family="Georgia, serif" font-size="18" letter-spacing="6">PORTRAIT</text>
+  <text x="180" y="1212" fill="#F7F2E9" font-family="Georgia, serif" font-size="42">Philtin Anosike</text>
+  <text x="180" y="1256" fill="#CBBFAE" font-family="Arial, sans-serif" font-size="24">Calm thinking. Structured execution. Long-term vision.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="162" y1="78" x2="1013" y2="1337" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26221E"/>
+      <stop offset="1" stop-color="#3D342A"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 520) rotate(90) scale(214)">
+      <stop stop-color="#AF8A4E" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#AF8A4E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

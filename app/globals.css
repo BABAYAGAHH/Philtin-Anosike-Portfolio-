@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 248 244 237;
+  --foreground: 24 23 21;
+  --surface: 239 233 223;
+  --surface-strong: 228 221 210;
+  --border: 213 203 188;
+  --accent: 175 138 78;
+  --accent-muted: 205 185 149;
+  --accent-ink: 132 99 48;
+  --accent-deep: 106 78 37;
+  --muted: 122 117 108;
+  --stone-text: 92 86 78;
+  --surface-lift: 255 252 247;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background:
+      radial-gradient(circle at 16% 12%, rgba(175, 138, 78, 0.14), transparent 30%),
+      radial-gradient(circle at 84% 14%, rgba(255, 255, 255, 0.76), transparent 22%),
+      linear-gradient(180deg, #faf7f1 0%, #f4eee6 48%, #f7f3ed 100%);
+    font-feature-settings: "liga" 1, "kern" 1, "ss01" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(31, 28, 24, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 28, 24, 0.022) 1px, transparent 1px);
+    background-size: 84px 84px;
+    mask-image: radial-gradient(circle at center, black 36%, transparent 100%);
+    opacity: 0.45;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-[-0.03em];
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+    transition:
+      color 220ms ease,
+      background-color 220ms ease,
+      border-color 220ms ease,
+      box-shadow 260ms ease,
+      transform 220ms ease,
+      opacity 220ms ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(175, 138, 78, 0.55);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: rgba(175, 138, 78, 0.24);
+    color: rgb(var(--foreground));
+  }
+
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(233, 227, 217, 0.9);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(175, 138, 78, 0.45);
+    border-radius: 999px;
+    border: 2px solid rgba(233, 227, 217, 0.9);
+  }
+}
+
+@layer components {
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+
+  .section-space-sm {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .paper-panel {
+    @apply rounded-[2rem] border border-white/70 bg-white/[0.84] shadow-card backdrop-blur-sm;
+  }
+
+  .publication-shell {
+    @apply rounded-[2.35rem] border border-white/70 bg-white/[0.82] shadow-card backdrop-blur-sm;
+  }
+
+  .article-prose {
+    @apply prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-stoneText prose-li:text-stoneText prose-blockquote:border-l-0 prose-blockquote:not-italic prose-strong:text-foreground prose-ul:pl-6;
+  }
+
+  .article-prose h2 {
+    @apply mt-16 text-3xl leading-tight sm:text-4xl;
+  }
+
+  .article-prose p {
+    @apply text-[1.08rem] leading-8;
+  }
+
+  .article-prose ul li::marker {
+    color: rgb(var(--accent-ink));
+  }
+
+  .article-prose > * + * {
+    @apply mt-7;
+  }
+
+  .article-prose > p:first-of-type {
+    font-size: clamp(1.22rem, 1.08rem + 0.8vw, 1.44rem);
+    line-height: 1.95;
+    color: rgb(var(--foreground));
+  }
+
+  .article-prose blockquote {
+    @apply my-10 rounded-[1.8rem] border border-accent/20 bg-accent/[0.08] px-6 py-5 text-2xl leading-tight text-foreground;
+  }
+
+  .article-prose ul {
+    @apply my-8 space-y-3;
+  }
+}
+
+@media (max-width: 640px) {
+  body::before {
+    background-size: 64px 64px;
+    opacity: 0.35;
+  }
+}
