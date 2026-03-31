@@ -9,11 +9,11 @@ import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export function Footer() {
   return (
-    <footer className="mt-12 border-t border-border/70 bg-[linear-gradient(180deg,rgba(247,243,236,0.94),rgba(240,234,224,0.98))] py-16 sm:py-20">
+    <footer className="mt-12 border-t border-border/70 bg-[linear-gradient(180deg,rgba(247,243,236,0.96),rgba(237,230,219,0.98))] py-16 sm:py-20">
       <Container className="grid gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
         <div className="max-w-xl">
           <p className="text-[0.72rem] uppercase tracking-[0.3em] text-stoneText/[0.64]">
-            PhiltinAnosike.com
+            Calm thinking. Structured execution.
           </p>
           <h2 className="mt-4 font-serif text-4xl leading-[0.98] text-foreground sm:text-5xl">
             {siteConfig.footer.name}
@@ -21,7 +21,7 @@ export function Footer() {
           <p className="mt-4 text-lg leading-8 text-stoneText">
             {siteConfig.footer.statement}
           </p>
-          <p className="mt-3 max-w-xl text-sm uppercase tracking-[0.22em] text-stoneText/[0.72]">
+          <p className="mt-3 max-w-xl text-sm tracking-[0.05em] text-stoneText/[0.78]">
             {siteConfig.footer.identity}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -55,13 +55,10 @@ export function Footer() {
 
           <div className="paper-panel p-6">
             <p className="text-[0.72rem] uppercase tracking-[0.26em] text-stoneText/[0.64]">
-              Platform
+              Approach
             </p>
             <p className="mt-4 text-sm leading-7 text-stoneText">
-              A high-trust digital platform for thoughtful writing, disciplined execution, and future-facing public credibility.
-            </p>
-            <p className="mt-5 text-[0.72rem] uppercase tracking-[0.24em] text-stoneText/[0.64]">
-              Port Harcourt - Nigeria
+              Thoughtful writing, disciplined execution, and a long-term leadership perspective built with clarity and restraint.
             </p>
           </div>
         </div>

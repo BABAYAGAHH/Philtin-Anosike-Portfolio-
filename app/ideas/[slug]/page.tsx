@@ -109,7 +109,7 @@ export default async function IdeaArticlePage({ params }: PageProps) {
                 <div className="flex flex-wrap items-center gap-3">
                   <Badge>{article.category}</Badge>
                   <span className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.62]">
-                    PhiltinAnosike.com Journal
+                    Ideas Journal
                   </span>
                 </div>
                 <h1 className="mt-8 font-serif text-[3.25rem] leading-[0.92] text-foreground sm:text-[4.6rem] lg:text-[5.4rem]">

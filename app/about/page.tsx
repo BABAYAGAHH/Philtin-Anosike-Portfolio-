@@ -79,7 +79,7 @@ export default function AboutPage() {
                   Founded in Port Harcourt to create structured, reliable transportation solutions with a premium standard of execution and service.
                 </p>
                 <p className="mt-4 text-base leading-8 text-stoneText">
-                  Beyond operational output, the business has become a platform for employment creation and a practical demonstration that long-term progress grows through deliberate structure.
+                  Beyond operational output, the business has become a driver of employment creation and a practical demonstration that long-term progress grows through deliberate structure.
                 </p>
               </ContentCard>
             </AnimatedReveal>
@@ -153,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        description="Explore the ideas, projects, and reflections that extend this long-term platform."
+        description="Explore the ideas, projects, and reflections that extend this long-term body of work."
         primaryHref="/ideas"
         primaryLabel="Read the ideas"
         secondaryHref="/projects"
@@ -163,4 +163,5 @@ export default function AboutPage() {
     </>
   );
 }
+
 

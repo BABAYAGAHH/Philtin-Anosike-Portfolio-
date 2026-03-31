@@ -26,7 +26,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 18);
+    const onScroll = () => setIsScrolled(window.scrollY > 14);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -61,29 +61,32 @@ export function Navbar() {
   return (
     <motion.header
       animate={{ y: 0 }}
-      className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4"
+      className={cn(
+        "sticky top-0 z-50 border-b px-3 transition-all duration-300 sm:px-4",
+        isScrolled || isOpen
+          ? "border-black/[0.08] bg-[rgba(247,243,236,0.92)] shadow-[0_18px_50px_rgba(24,23,21,0.08)] backdrop-blur-2xl"
+          : "border-black/[0.06] bg-[rgba(247,243,236,0.78)] backdrop-blur-xl"
+      )}
       initial={{ y: -14, opacity: 0 }}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
-      <Container
-        className={cn(
-          "relative flex items-center gap-3 rounded-[1.6rem] border px-3 py-3 transition-all duration-300 sm:px-4",
-          isScrolled || isOpen
-            ? "border-white/80 bg-[linear-gradient(180deg,rgba(255,253,249,0.88),rgba(247,242,234,0.78))] shadow-card backdrop-blur-2xl"
-            : "border-transparent bg-[linear-gradient(180deg,rgba(255,255,255,0.36),rgba(255,255,255,0.18))] backdrop-blur-md"
-        )}
-      >
-        <Link className="min-w-0 flex-1 lg:flex-none" href="/">
-          <span className="block truncate font-serif text-[1.15rem] leading-none text-foreground sm:text-[1.28rem]">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(18,17,15,0.08),transparent_100%)] opacity-50" />
+
+      <Container className="relative flex h-[4.9rem] items-center gap-3">
+        <Link className="min-w-0 flex-1 md:flex-none" href="/">
+          <span className="block truncate font-serif text-[1.12rem] leading-none text-foreground sm:text-[1.26rem]">
             Philtin Anosike
           </span>
-          <span className="mt-1 hidden text-[0.62rem] uppercase tracking-[0.3em] text-stoneText/[0.7] sm:block">
+          <span className="mt-1 hidden text-[0.62rem] uppercase tracking-[0.24em] text-stoneText/[0.72] sm:block">
             Calm thinking. Structured execution.
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden flex-1 items-center justify-center lg:flex">
-          <div className="flex items-center gap-1 rounded-full border border-black/[0.05] bg-white/[0.62] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] backdrop-blur">
+        <nav
+          aria-label="Primary"
+          className="hidden flex-1 items-center justify-center md:flex"
+        >
+          <div className="flex items-center gap-1 rounded-full border border-black/[0.06] bg-white/[0.72] p-1.5 shadow-[0_12px_34px_rgba(24,23,21,0.08)] backdrop-blur">
             {navigationItems.map((item) => {
               const active = isActive(pathname, item.href);
 
@@ -94,7 +97,7 @@ export function Navbar() {
                     "rounded-full px-4 py-2.5 text-sm font-medium tracking-[0.01em] transition",
                     active
                       ? "bg-[rgb(var(--foreground))] text-white shadow-[0_10px_24px_rgba(24,23,21,0.16)]"
-                      : "text-stoneText hover:bg-white/90 hover:text-foreground"
+                      : "text-stoneText hover:bg-white hover:text-foreground"
                   )}
                   href={item.href}
                 >
@@ -105,8 +108,8 @@ export function Navbar() {
           </div>
         </nav>
 
-        <div className="hidden lg:block">
-          <PrimaryButton className="min-h-[2.85rem] px-5" href="/contact">
+        <div className="hidden md:block">
+          <PrimaryButton className="min-h-[2.8rem] px-5" href="/contact">
             Contact
           </PrimaryButton>
         </div>
@@ -115,7 +118,7 @@ export function Navbar() {
           aria-controls="mobile-nav"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-white/[0.82] text-foreground shadow-[0_10px_24px_rgba(24,23,21,0.06)] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/[0.08] bg-white/[0.88] text-foreground shadow-[0_10px_24px_rgba(24,23,21,0.08)] md:hidden"
           onClick={() => setIsOpen((value) => !value)}
           type="button"
         >
@@ -128,14 +131,14 @@ export function Navbar() {
           <>
             <motion.div
               animate={{ opacity: 1 }}
-              className="fixed inset-0 z-40 bg-[rgba(20,19,17,0.34)] backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-[rgba(20,19,17,0.34)] backdrop-blur-sm md:hidden"
               exit={{ opacity: 0 }}
               initial={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
               animate={{ x: 0, opacity: 1 }}
-              className="fixed inset-y-4 right-4 z-50 flex w-[min(88vw,24rem)] flex-col rounded-[2.25rem] border border-white/[0.12] bg-[linear-gradient(180deg,#181715_0%,#23211d_100%)] p-6 text-white shadow-2xl lg:hidden"
+              className="fixed inset-y-4 right-4 z-50 flex w-[min(88vw,24rem)] flex-col rounded-[2.25rem] border border-white/[0.12] bg-[linear-gradient(180deg,#181715_0%,#23211d_100%)] p-6 text-white shadow-2xl md:hidden"
               exit={{ x: 24, opacity: 0 }}
               id="mobile-nav"
               initial={{ x: 32, opacity: 0 }}
@@ -144,8 +147,8 @@ export function Navbar() {
               <div className="flex items-center justify-between">
                 <div>
                   <span className="block font-serif text-xl">Philtin Anosike</span>
-                  <span className="mt-1 block text-[0.68rem] uppercase tracking-[0.28em] text-white/[0.55]">
-                    Structured leadership platform
+                  <span className="mt-1 block text-[0.68rem] uppercase tracking-[0.24em] text-white/[0.55]">
+                    Calm thinking. Structured execution.
                   </span>
                 </div>
                 <button

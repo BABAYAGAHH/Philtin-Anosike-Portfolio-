@@ -29,9 +29,10 @@
   body {
     @apply bg-background font-sans text-foreground antialiased;
     background:
-      radial-gradient(circle at 16% 12%, rgba(175, 138, 78, 0.14), transparent 30%),
-      radial-gradient(circle at 84% 14%, rgba(255, 255, 255, 0.76), transparent 22%),
-      linear-gradient(180deg, #faf7f1 0%, #f4eee6 48%, #f7f3ed 100%);
+      radial-gradient(circle at 14% 10%, rgba(175, 138, 78, 0.12), transparent 28%),
+      radial-gradient(circle at 86% 12%, rgba(255, 255, 255, 0.72), transparent 20%),
+      radial-gradient(circle at 78% 42%, rgba(18, 17, 15, 0.06), transparent 26%),
+      linear-gradient(180deg, #f9f6f0 0%, #f2ebe1 48%, #f6f1e9 100%);
     font-feature-settings: "liga" 1, "kern" 1, "ss01" 1;
     text-rendering: optimizeLegibility;
   }
@@ -43,11 +44,30 @@
     pointer-events: none;
     z-index: -1;
     background-image:
-      linear-gradient(rgba(31, 28, 24, 0.022) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(31, 28, 24, 0.022) 1px, transparent 1px);
+      linear-gradient(rgba(31, 28, 24, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 28, 24, 0.02) 1px, transparent 1px);
     background-size: 84px 84px;
     mask-image: radial-gradient(circle at center, black 36%, transparent 100%);
     opacity: 0.45;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(10, 10, 10, 0.07), transparent 34%),
+      radial-gradient(circle at 84% 100%, rgba(10, 10, 10, 0.06), transparent 30%),
+      repeating-linear-gradient(
+        135deg,
+        rgba(10, 10, 10, 0.02) 0,
+        rgba(10, 10, 10, 0.02) 1px,
+        transparent 1px,
+        transparent 7px
+      );
+    opacity: 0.42;
   }
 
   h1,
@@ -160,5 +180,9 @@
   body::before {
     background-size: 64px 64px;
     opacity: 0.35;
+  }
+
+  body::after {
+    opacity: 0.32;
   }
 }

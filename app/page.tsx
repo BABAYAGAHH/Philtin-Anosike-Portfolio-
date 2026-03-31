@@ -23,8 +23,8 @@ const heroDetails = [
     value: "Business structure"
   },
   {
-    label: "Operating base",
-    value: "Port Harcourt"
+    label: "Method",
+    value: "Calm thinking"
   },
   {
     label: "Orientation",
@@ -35,7 +35,7 @@ const heroDetails = [
 export const metadata = createMetadata({
   title: "Home",
   description:
-    "A premium personal platform for Philtin Anosike, sharing ideas on leadership, systems thinking, entrepreneurship, and long-term national development.",
+    "Thoughtful writing from Philtin Anosike on leadership, systems thinking, entrepreneurship, and long-term national development.",
   path: "/"
 });
 
@@ -45,27 +45,22 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden pb-24 pt-10 sm:pb-28 sm:pt-16 lg:pb-32 lg:pt-20">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-[42rem] bg-[radial-gradient(circle_at_18%_14%,rgba(175,138,78,0.16),transparent_34%),radial-gradient(circle_at_84%_18%,rgba(255,255,255,0.82),transparent_24%)]" />
+      <section className="relative overflow-hidden pb-24 pt-8 sm:pb-28 sm:pt-12 lg:pb-32 lg:pt-16">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[42rem] bg-[radial-gradient(circle_at_14%_12%,rgba(175,138,78,0.14),transparent_30%),radial-gradient(circle_at_86%_14%,rgba(255,255,255,0.74),transparent_22%),radial-gradient(circle_at_76%_40%,rgba(24,23,21,0.08),transparent_32%)]" />
 
         <Container className="relative grid gap-14 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center">
           <AnimatedReveal className="max-w-3xl lg:pr-8">
-            <div className="mb-6 flex flex-wrap items-center gap-3">
-              <Badge>Premium personal platform</Badge>
-              <span className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.64]">
-                Port Harcourt, Nigeria
-              </span>
-            </div>
+            <Badge>Structured perspective</Badge>
 
-            <h1 className="font-serif text-[3.85rem] leading-[0.88] text-foreground sm:text-[5.1rem] lg:text-[6rem]">
+            <h1 className="mt-6 whitespace-nowrap font-serif text-[clamp(2.35rem,8.2vw,6rem)] leading-[0.92] tracking-[-0.045em] text-foreground">
               {siteConfig.name}
             </h1>
 
-            <p className="mt-6 max-w-2xl text-[0.78rem] uppercase tracking-[0.34em] text-stoneText/[0.7] sm:text-[0.82rem]">
+            <p className="mt-5 max-w-full whitespace-nowrap text-[clamp(0.5rem,1.9vw,0.84rem)] tracking-[0.08em] text-stoneText/[0.72]">
               {siteConfig.title}
             </p>
 
-            <p className="mt-8 max-w-2xl font-serif text-[2.2rem] leading-[1.03] text-foreground sm:text-[2.85rem] lg:text-[3.3rem]">
+            <p className="mt-8 max-w-2xl font-serif text-[2.1rem] leading-[1.03] text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">
               {siteConfig.statement}
             </p>
 
@@ -93,8 +88,9 @@ export default function HomePage() {
           </AnimatedReveal>
 
           <AnimatedReveal className="relative lg:justify-self-end" delay={0.08}>
-            <div className="relative overflow-hidden rounded-[3rem] border border-white/70 bg-[linear-gradient(180deg,#181715_0%,#27231e_100%)] p-4 shadow-[0_40px_120px_rgba(24,23,21,0.22)] sm:p-6">
+            <div className="relative overflow-hidden rounded-[3rem] border border-white/70 bg-[linear-gradient(180deg,#141311_0%,#24201b_100%)] p-4 shadow-[0_42px_120px_rgba(14,13,12,0.26)] sm:p-6">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(175,138,78,0.22),transparent_26%)]" />
+              <div className="pointer-events-none absolute inset-0 opacity-35 mix-blend-soft-light bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.18),transparent_22%),repeating-linear-gradient(135deg,rgba(8,8,8,0.2)_0,rgba(8,8,8,0.2)_1px,transparent_1px,transparent_9px)]" />
 
               <div className="absolute left-6 top-6 z-20">
                 <Badge tone="outline">Structured Thinking. Disciplined Action.</Badge>
@@ -117,7 +113,7 @@ export default function HomePage() {
               <div className="relative mt-5 grid gap-4 rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))] p-5 text-white/[0.84] backdrop-blur-xl sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
                 <div>
                   <p className="text-[0.68rem] uppercase tracking-[0.28em] text-white/[0.55]">
-                    Port Harcourt, Nigeria
+                    Leadership perspective
                   </p>
                   <p className="mt-3 max-w-md font-serif text-[1.75rem] leading-tight">
                     Calm, credible leadership shaped by structure rather than noise.
@@ -216,7 +212,7 @@ export default function HomePage() {
 
       <section className="section-space">
         <Container>
-          <AnimatedReveal className="paper-panel rounded-[2.6rem] p-8 sm:p-10 lg:grid lg:grid-cols-[minmax(0,1fr)_26rem] lg:gap-10 lg:items-end">
+          <AnimatedReveal className="paper-panel rounded-[2.6rem] p-8 sm:p-10 lg:grid lg:grid-cols-[minmax(0,1fr)_26rem] lg:items-end lg:gap-10">
             <div className="max-w-3xl">
               <p className="text-[0.72rem] uppercase tracking-[0.28em] text-stoneText/[0.64]">
                 Insights from Philtin
@@ -234,7 +230,7 @@ export default function HomePage() {
       </section>
 
       <CTASection
-        description="Explore the writing, projects, and reflections shaping a disciplined long-term platform."
+        description="Explore the writing, projects, and reflections shaping a disciplined long-term body of work."
         primaryHref="/contact"
         primaryLabel="Start a conversation"
         secondaryHref="/newsletter"
@@ -244,3 +240,4 @@ export default function HomePage() {
     </>
   );
 }
+

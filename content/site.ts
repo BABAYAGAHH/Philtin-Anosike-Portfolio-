@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Philtin Anosike",
-  siteName: "PhiltinAnosike.com",
+  siteName: "Philtin Anosike",
   url: "https://philtinanosike.com",
-  title: "Entrepreneur | Systems Thinker | Advocate for Disciplined Leadership",
+  title: "Entrepreneur | Systems thinker | Advocate for disciplined leadership",
   statement: "Calm thinking. Structured execution. Long-term vision.",
   heroSupport:
     "Building structured solutions in business while sharing insights on leadership, accountability, and national development.",
@@ -14,7 +14,7 @@ export const siteConfig = {
     "I was born on May 5th, 1990. I studied Microbiology at Abia State University, a period that helped shape my analytical thinking and understanding of structured systems.",
   businessJourney: [
     "My journey into business was driven by a desire to build systems that solve real problems. I founded 22 Logistics in Port Harcourt with a focus on creating structured and reliable transportation solutions.",
-    "Over the years, the business has grown into a platform that not only serves clients but also creates employment opportunities. This experience has reinforced my belief that sustainable progress is built through deliberate structure, not chance."
+    "Over the years, the business has grown into a business that not only serves clients but also creates employment opportunities. This experience has reinforced my belief that sustainable progress is built through deliberate structure, not chance."
   ],
   philosophy: [
     {
@@ -65,7 +65,7 @@ export const siteConfig = {
     name: "Philtin Anosike",
     statement: "Calm thinking. Structured execution. Long-term vision.",
     identity:
-      "Entrepreneur | Systems Thinker | Advocate for Disciplined Leadership"
+      "Entrepreneur | Systems thinker | Advocate for disciplined leadership"
   },
   socialLinks: [
     { label: "LinkedIn", href: undefined },
@@ -90,3 +90,4 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+

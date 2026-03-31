@@ -9,7 +9,7 @@ export default function NotFound() {
       <PageHero
         eyebrow="Not Found"
         title="That page is not available."
-        description="The route may have changed, or the page may not exist yet. The main sections of the platform are still available below."
+        description="The route may have changed, or the page may not exist yet. The main sections of the site are still available below."
       />
       <section className="section-space-sm">
         <Container className="flex flex-col gap-4 sm:flex-row">
@@ -20,4 +20,5 @@ export default function NotFound() {
     </>
   );
 }
+
 
