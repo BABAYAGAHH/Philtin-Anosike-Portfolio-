@@ -1,0 +1,71 @@
+name: Vercel Deploy Fallback
+
+on:
+  workflow_run:
+    workflows:
+      - Continuous Integration
+    types:
+      - completed
+
+concurrency:
+  group: vercel-fallback-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-fallback:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      statuses: read
+
+    steps:
+      - name: Check for Vercel status on commit
+        id: vercel_status
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const sha = context.payload.workflow_run.head_sha;
+            const attempts = 12;
+            const waitMs = 30000;
+
+            for (let attempt = 1; attempt <= attempts; attempt += 1) {
+              const { data } = await github.rest.repos.getCombinedStatusForRef({
+                owner,
+                repo,
+                ref: sha,
+              });
+
+              const vercelStatus = data.statuses.find(
+                (status) => status.context === "Vercel"
+              );
+
+              if (vercelStatus) {
+                core.info(
+                  `Detected Vercel status "${vercelStatus.state}" for ${sha}.`
+                );
+                core.setOutput("detected", "true");
+                core.setOutput("state", vercelStatus.state);
+                return;
+              }
+
+              if (attempt < attempts) {
+                core.info(
+                  `No Vercel status detected for ${sha}. Waiting 30 seconds before retry ${attempt + 1}/${attempts}.`
+                );
+                await new Promise((resolve) => setTimeout(resolve, waitMs));
+              }
+            }
+
+            core.setOutput("detected", "false");
+            core.setOutput("state", "missing");
+
+      - name: Trigger Vercel deploy hook
+        if: steps.vercel_status.outputs.detected != 'true'
+        run: curl --fail --show-error --silent -X POST "https://api.vercel.com/v1/integrations/deploy/prj_XCiZwKHbUhEZRcW1o0Rneq6PXuVV/hqOhMMgDaQ"
+
+      - name: Log fallback result
+        if: steps.vercel_status.outputs.detected != 'true'
+        run: echo "Triggered the Vercel deploy hook because no Vercel status was found for ${{ github.event.workflow_run.head_sha }}."

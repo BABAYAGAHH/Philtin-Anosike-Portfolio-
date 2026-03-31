@@ -60,19 +60,19 @@ export function Navbar() {
 
   return (
     <motion.header
-      animate={{ y: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       className={cn(
         "sticky top-0 z-50 border-b px-3 transition-all duration-300 sm:px-4",
         isScrolled || isOpen
           ? "border-black/[0.08] bg-[rgba(247,243,236,0.92)] shadow-[0_18px_50px_rgba(24,23,21,0.08)] backdrop-blur-2xl"
           : "border-black/[0.06] bg-[rgba(247,243,236,0.78)] backdrop-blur-xl"
       )}
-      initial={{ y: -14, opacity: 0 }}
+      initial={false}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(18,17,15,0.08),transparent_100%)] opacity-50" />
 
-      <Container className="relative flex h-[4.9rem] items-center gap-3">
+      <Container className="relative flex h-[4.9rem] items-center justify-between gap-3">
         <Link className="min-w-0 flex-1 md:flex-none" href="/">
           <span className="block truncate font-serif text-[1.12rem] leading-none text-foreground sm:text-[1.26rem]">
             Philtin Anosike
@@ -118,11 +118,14 @@ export function Navbar() {
           aria-controls="mobile-nav"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/[0.08] bg-white/[0.88] text-foreground shadow-[0_10px_24px_rgba(24,23,21,0.08)] md:hidden"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/[0.08] bg-white/[0.92] px-4 text-foreground shadow-[0_10px_24px_rgba(24,23,21,0.08)] md:hidden"
           onClick={() => setIsOpen((value) => !value)}
           type="button"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <span className="text-sm font-medium tracking-[0.02em]">
+            {isOpen ? "Close" : "Menu"}
+          </span>
         </button>
       </Container>
 
