@@ -63,7 +63,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="section-space bg-[linear-gradient(180deg,rgba(255,251,244,0.45),rgba(239,233,223,0.6))]">
+      <section className="section-space bg-[linear-gradient(180deg,rgba(239,245,240,0.62),rgba(224,233,225,0.72))]">
         <Container>
           <SectionHeading
             eyebrow="Business journey"
@@ -143,7 +143,7 @@ export default function AboutPage() {
             </ContentCard>
           </AnimatedReveal>
           <AnimatedReveal delay={0.08}>
-            <div className="rounded-[2.25rem] border border-white/10 bg-[linear-gradient(180deg,#171614_0%,#23211d_100%)] p-8 text-white shadow-glow sm:p-10">
+            <div className="rounded-[2.25rem] border border-white/10 bg-[linear-gradient(180deg,#0a1c15_0%,#173826_100%)] p-8 text-white shadow-glow sm:p-10">
               <p className="text-sm uppercase tracking-[0.24em] text-white/[0.55]">Vision</p>
               <h3 className="mt-4 font-serif text-4xl leading-tight">Long-term leadership built on structure and accountability.</h3>
               <p className="mt-5 text-base leading-8 text-white/[0.72]">{siteConfig.vision}</p>
@@ -163,5 +163,6 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 

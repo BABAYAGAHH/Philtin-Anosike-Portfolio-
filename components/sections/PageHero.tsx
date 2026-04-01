@@ -31,8 +31,8 @@ export function PageHero({
       className={cn(
         "relative overflow-hidden border-b border-border/60 pb-20 pt-24 sm:pb-24 sm:pt-28 lg:pb-28",
         dark
-          ? "bg-[linear-gradient(180deg,#171614_0%,#22201d_100%)] text-white"
-          : "bg-[linear-gradient(180deg,rgba(255,251,244,0.92)_0%,rgba(249,246,240,0.75)_100%)]",
+          ? "bg-[linear-gradient(180deg,#10271c_0%,#173928_100%)] text-white"
+          : "bg-[linear-gradient(180deg,rgba(244,248,244,0.96)_0%,rgba(236,243,237,0.82)_100%)]",
         className
       )}
     >
@@ -40,8 +40,8 @@ export function PageHero({
         className={cn(
           "pointer-events-none absolute inset-0",
           dark
-            ? "bg-[radial-gradient(circle_at_18%_12%,rgba(175,138,78,0.18),transparent_28%),radial-gradient(circle_at_88%_18%,rgba(255,255,255,0.08),transparent_22%)]"
-            : "bg-[radial-gradient(circle_at_16%_10%,rgba(175,138,78,0.14),transparent_30%),radial-gradient(circle_at_86%_16%,rgba(255,255,255,0.66),transparent_22%)]"
+            ? "bg-[radial-gradient(circle_at_18%_12%,rgba(96,148,119,0.22),transparent_28%),radial-gradient(circle_at_88%_18%,rgba(255,255,255,0.08),transparent_22%)]"
+            : "bg-[radial-gradient(circle_at_16%_10%,rgba(46,98,71,0.14),transparent_30%),radial-gradient(circle_at_86%_16%,rgba(255,255,255,0.64),transparent_22%)]"
         )}
       />
       <Container className="relative grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
@@ -54,7 +54,7 @@ export function PageHero({
                   "h-px w-16",
                   dark
                     ? "bg-[linear-gradient(90deg,rgba(255,255,255,0.45),transparent)]"
-                    : "bg-[linear-gradient(90deg,rgba(175,138,78,0.55),transparent)]"
+                    : "bg-[linear-gradient(90deg,rgba(46,98,71,0.55),transparent)]"
                 )}
               />
             </div>
@@ -79,7 +79,7 @@ export function PageHero({
               "rounded-[2rem] border p-6 shadow-card sm:p-7",
               dark
                 ? "border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] text-white/75"
-                : "border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(247,242,234,0.88))] text-stoneText"
+                : "border-white/60 bg-[linear-gradient(180deg,rgba(249,251,248,0.9),rgba(233,239,234,0.9))] text-stoneText"
             )}
             delay={0.1}
           >

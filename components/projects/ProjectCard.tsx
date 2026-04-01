@@ -25,7 +25,7 @@ export function ProjectCard({
         caseStudy && "grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]"
       )}
     >
-      <div className="relative min-h-72 overflow-hidden bg-[linear-gradient(135deg,rgba(36,34,31,0.96),rgba(87,67,42,0.72))]">
+      <div className="relative min-h-72 overflow-hidden bg-[linear-gradient(135deg,rgba(12,31,23,0.98),rgba(37,79,57,0.78))]">
         <Image
           alt={project.title}
           className="h-full w-full object-cover opacity-92 transition duration-700 group-hover:scale-[1.035]"
@@ -33,7 +33,7 @@ export function ProjectCard({
           sizes={caseStudy ? "(min-width: 1024px) 42vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
           src={project.image}
         />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(17,16,14,0.44))]" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(8,22,17,0.54))]" />
       </div>
 
       <div className="flex flex-col justify-between p-7 sm:p-9">
@@ -73,7 +73,7 @@ export function ProjectCard({
               </div>
             </div>
           ) : (
-            <div className="mt-6 rounded-[1.7rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(239,233,223,0.7))] px-5 py-5">
+            <div className="mt-6 rounded-[1.7rem] border border-white/65 bg-[linear-gradient(180deg,rgba(249,251,248,0.78),rgba(231,238,232,0.78))] px-5 py-5">
               <p className="text-[0.72rem] uppercase tracking-[0.24em] text-stoneText/[0.64]">
                 Outcome
               </p>

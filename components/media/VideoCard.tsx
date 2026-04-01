@@ -20,7 +20,7 @@ export function VideoCard({ entry, featured = false }: VideoCardProps) {
         featured && "grid gap-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]"
       )}
     >
-      <div className="relative min-h-72 overflow-hidden bg-[linear-gradient(135deg,rgba(25,24,22,1),rgba(93,70,40,0.86))]">
+      <div className="relative min-h-72 overflow-hidden bg-[linear-gradient(135deg,rgba(9,23,18,1),rgba(38,83,60,0.88))]">
         <Image
           alt={entry.title}
           className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
@@ -32,7 +32,7 @@ export function VideoCard({ entry, featured = false }: VideoCardProps) {
         <div className="absolute left-6 top-6">
           <Badge tone="outline">{entry.label}</Badge>
         </div>
-        <div className="absolute bottom-6 left-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.15] bg-white/10 text-white backdrop-blur">
+        <div className="absolute bottom-6 left-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.14] bg-white/10 text-white backdrop-blur">
           <Play className="h-5 w-5 fill-current" />
         </div>
       </div>

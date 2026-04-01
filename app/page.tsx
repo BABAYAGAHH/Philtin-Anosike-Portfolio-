@@ -46,7 +46,8 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden pb-24 pt-8 sm:pb-28 sm:pt-12 lg:pb-32 lg:pt-16">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-[42rem] bg-[radial-gradient(circle_at_14%_12%,rgba(175,138,78,0.14),transparent_30%),radial-gradient(circle_at_86%_14%,rgba(255,255,255,0.74),transparent_22%),radial-gradient(circle_at_76%_40%,rgba(24,23,21,0.08),transparent_32%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[44rem] bg-[radial-gradient(circle_at_14%_12%,rgba(46,98,71,0.18),transparent_30%),radial-gradient(circle_at_84%_14%,rgba(255,255,255,0.7),transparent_22%),radial-gradient(circle_at_76%_42%,rgba(11,29,22,0.11),transparent_34%)]" />
+        <div className="pointer-events-none absolute inset-0 opacity-20 mix-blend-soft-light bg-[repeating-linear-gradient(135deg,rgba(7,17,13,0.16)_0,rgba(7,17,13,0.16)_1px,transparent_1px,transparent_10px)]" />
 
         <Container className="relative grid gap-14 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center">
           <AnimatedReveal className="max-w-3xl lg:pr-8">
@@ -56,7 +57,7 @@ export default function HomePage() {
               {siteConfig.name}
             </h1>
 
-            <p className="mt-5 max-w-full whitespace-nowrap text-[clamp(0.5rem,1.9vw,0.84rem)] tracking-[0.08em] text-stoneText/[0.72]">
+            <p className="mt-5 max-w-full whitespace-nowrap text-[clamp(0.5rem,1.9vw,0.84rem)] tracking-[0.08em] text-stoneText/[0.78]">
               {siteConfig.title}
             </p>
 
@@ -88,9 +89,9 @@ export default function HomePage() {
           </AnimatedReveal>
 
           <AnimatedReveal className="relative lg:justify-self-end" delay={0.08}>
-            <div className="relative overflow-hidden rounded-[3rem] border border-white/70 bg-[linear-gradient(180deg,#141311_0%,#24201b_100%)] p-4 shadow-[0_42px_120px_rgba(14,13,12,0.26)] sm:p-6">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(175,138,78,0.22),transparent_26%)]" />
-              <div className="pointer-events-none absolute inset-0 opacity-35 mix-blend-soft-light bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.18),transparent_22%),repeating-linear-gradient(135deg,rgba(8,8,8,0.2)_0,rgba(8,8,8,0.2)_1px,transparent_1px,transparent_9px)]" />
+            <div className="relative overflow-hidden rounded-[3rem] border border-white/55 bg-[linear-gradient(180deg,#0a1c15_0%,#173826_100%)] p-4 shadow-[0_42px_120px_rgba(5,14,11,0.28)] sm:p-6">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,154,124,0.28),transparent_28%)]" />
+              <div className="pointer-events-none absolute inset-0 opacity-35 mix-blend-soft-light bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.18),transparent_22%),repeating-linear-gradient(135deg,rgba(7,17,13,0.22)_0,rgba(7,17,13,0.22)_1px,transparent_1px,transparent_9px)]" />
 
               <div className="absolute left-6 top-6 z-20">
                 <Badge tone="outline">Structured Thinking. Disciplined Action.</Badge>
@@ -175,7 +176,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="section-space bg-[linear-gradient(180deg,#171614_0%,#221f1b_100%)] text-white">
+      <section className="section-space bg-[linear-gradient(180deg,#0a1c15_0%,#163424_100%)] text-white">
         <Container>
           <div className="mb-12 max-w-3xl">
             <p className="text-[0.72rem] uppercase tracking-[0.28em] text-white/[0.55]">
@@ -235,9 +236,10 @@ export default function HomePage() {
         primaryLabel="Start a conversation"
         secondaryHref="/newsletter"
         secondaryLabel="Join the newsletter"
-        title="A serious digital home for ideas, execution, and future leadership."
+        title="A disciplined body of work built for ideas, execution, and future leadership."
       />
     </>
   );
 }
+
 

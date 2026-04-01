@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Philtin Anosike",
   siteName: "Philtin Anosike",
-  url: "https://philtinanosike.com",
+  url: "https://philtin-anosike-portfolio.vercel.app",
   title: "Entrepreneur | Systems thinker | Advocate for disciplined leadership",
   statement: "Calm thinking. Structured execution. Long-term vision.",
   heroSupport:
@@ -90,4 +90,5 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+
 

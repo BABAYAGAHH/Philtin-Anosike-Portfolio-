@@ -23,7 +23,7 @@ export function QuoteBlock({
         "rounded-[2.2rem] border px-6 py-8 sm:px-8 sm:py-10",
         inverted
           ? "border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.09),rgba(255,255,255,0.04))] text-white"
-          : "border-accent/[0.18] bg-[linear-gradient(145deg,rgba(175,138,78,0.09),rgba(255,255,255,0.88))] text-foreground shadow-card",
+          : "border-accent/[0.18] bg-[linear-gradient(145deg,rgba(46,98,71,0.1),rgba(249,251,248,0.88))] text-foreground shadow-card",
         className
       )}
       {...props}

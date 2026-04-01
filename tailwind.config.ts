@@ -23,17 +23,17 @@ const config: Config = {
       },
       boxShadow: {
         glow:
-          "0 32px 90px rgba(175, 138, 78, 0.15), 0 10px 28px rgba(21, 20, 18, 0.08)",
+          "0 32px 90px rgba(46, 98, 71, 0.22), 0 12px 30px rgba(9, 22, 17, 0.14)",
         card:
-          "0 30px 80px rgba(23, 21, 18, 0.09), 0 8px 22px rgba(23, 21, 18, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.58)"
+          "0 30px 80px rgba(11, 25, 19, 0.12), 0 8px 22px rgba(11, 25, 19, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.52)"
       },
       backgroundImage: {
         radialWarm:
-          "radial-gradient(circle at top, rgba(175, 138, 78, 0.2), transparent 46%)",
+          "radial-gradient(circle at top, rgba(46, 98, 71, 0.24), transparent 46%)",
         softGrid:
-          "linear-gradient(rgba(21, 20, 18, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(21, 20, 18, 0.03) 1px, transparent 1px)",
+          "linear-gradient(rgba(14, 33, 25, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 33, 25, 0.035) 1px, transparent 1px)",
         paperVeil:
-          "linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.18))"
+          "linear-gradient(180deg, rgba(250,252,249,0.78), rgba(237,243,238,0.2))"
       },
       fontFamily: {
         sans: [

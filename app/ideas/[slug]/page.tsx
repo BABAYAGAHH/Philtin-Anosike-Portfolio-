@@ -57,7 +57,7 @@ function renderBlock(block: ArticleBlock, index: number) {
     return (
       <blockquote
         key={`${block.type}-${index}`}
-        className="rounded-[1.9rem] border border-accent/[0.18] bg-[linear-gradient(180deg,rgba(175,138,78,0.1),rgba(255,255,255,0.86))] px-6 py-6 font-serif text-[1.85rem] leading-[1.16] text-foreground"
+        className="rounded-[1.9rem] border border-accent/[0.16] bg-[linear-gradient(180deg,rgba(46,98,71,0.1),rgba(249,251,248,0.92))] px-6 py-6 font-serif text-[1.85rem] leading-[1.16] text-foreground"
       >
         &ldquo;{block.content}&rdquo;
       </blockquote>
@@ -93,7 +93,8 @@ export default async function IdeaArticlePage({ params }: PageProps) {
 
       <article>
         <section className="relative overflow-hidden border-b border-border/70 pb-16 pt-16 sm:pb-20 sm:pt-20 lg:pb-24 lg:pt-24">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(175,138,78,0.14),transparent_28%),radial-gradient(circle_at_86%_18%,rgba(255,255,255,0.8),transparent_24%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(46,98,71,0.16),transparent_28%),radial-gradient(circle_at_86%_18%,rgba(255,255,255,0.74),transparent_24%),radial-gradient(circle_at_76%_34%,rgba(11,29,22,0.08),transparent_28%)]" />
+          <div className="pointer-events-none absolute inset-0 opacity-20 mix-blend-soft-light bg-[repeating-linear-gradient(135deg,rgba(7,17,13,0.16)_0,rgba(7,17,13,0.16)_1px,transparent_1px,transparent_11px)]" />
 
           <Container className="relative">
             <Link
@@ -156,7 +157,7 @@ export default async function IdeaArticlePage({ params }: PageProps) {
             </div>
 
             <aside className="self-start lg:sticky lg:top-28">
-              <div className="space-y-4 rounded-[2rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(248,244,237,0.92))] p-6 shadow-card">
+              <div className="space-y-4 rounded-[2rem] border border-white/65 bg-[linear-gradient(180deg,rgba(248,251,248,0.94),rgba(229,237,230,0.94))] p-6 shadow-card">
                 <div>
                   <p className="text-[0.72rem] uppercase tracking-[0.24em] text-stoneText/[0.64]">
                     Publication note
@@ -179,7 +180,7 @@ export default async function IdeaArticlePage({ params }: PageProps) {
           </Container>
         </section>
 
-        <section className="section-space-sm border-t border-border/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),transparent)]">
+        <section className="section-space-sm border-t border-border/60 bg-[linear-gradient(180deg,rgba(248,251,248,0.45),transparent)]">
           <Container>
             <SectionHeading
               eyebrow="Related articles"
@@ -197,3 +198,5 @@ export default async function IdeaArticlePage({ params }: PageProps) {
     </>
   );
 }
+
+

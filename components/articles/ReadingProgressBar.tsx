@@ -22,10 +22,9 @@ export function ReadingProgressBar() {
   return (
     <div className="fixed left-0 top-0 z-[60] h-1 w-full bg-transparent">
       <div
-        className="h-full bg-[linear-gradient(90deg,rgba(175,138,78,0.85),rgba(124,96,52,0.92))] transition-[width] duration-150"
+        className="h-full bg-[linear-gradient(90deg,rgba(46,98,71,0.9),rgba(14,43,31,0.95))] transition-[width] duration-150"
         style={{ width: `${progress}%` }}
       />
     </div>
   );
 }
-

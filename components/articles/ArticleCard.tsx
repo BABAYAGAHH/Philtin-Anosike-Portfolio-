@@ -56,7 +56,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
           <span>{article.readTime}</span>
         </div>
 
-        <blockquote className="rounded-[1.75rem] border border-accent/[0.16] bg-[linear-gradient(180deg,rgba(175,138,78,0.12),rgba(255,255,255,0.9))] px-5 py-5 text-base leading-7 text-foreground">
+        <blockquote className="rounded-[1.75rem] border border-accent/[0.16] bg-[linear-gradient(180deg,rgba(46,98,71,0.12),rgba(249,251,248,0.92))] px-5 py-5 text-base leading-7 text-foreground">
           &ldquo;{article.featuredQuote}&rdquo;
         </blockquote>
 

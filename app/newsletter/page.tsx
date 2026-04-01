@@ -64,7 +64,7 @@ export default function NewsletterPage() {
             </div>
           </div>
           <AnimatedReveal>
-            <div className="rounded-[2.5rem] border border-border/70 bg-[linear-gradient(135deg,rgba(255,251,244,0.96),rgba(239,233,223,0.96))] p-8 shadow-card sm:p-10">
+            <div className="rounded-[2.5rem] border border-border/70 bg-[linear-gradient(135deg,rgba(248,251,248,0.96),rgba(228,236,229,0.96))] p-8 shadow-card sm:p-10">
               <p className="text-sm uppercase tracking-[0.24em] text-stoneText/70">
                 Subscribe
               </p>
@@ -118,4 +118,5 @@ export default function NewsletterPage() {
     </>
   );
 }
+
 

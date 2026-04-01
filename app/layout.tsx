@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#171614"
+  themeColor: "#10271c"
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html className="scroll-smooth" lang="en">
       <body>
         <a
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-[rgb(var(--foreground))] focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-[rgb(var(--accent-deep))] focus:px-4 focus:py-2 focus:text-white"
           href="#main-content"
         >
           Skip to content

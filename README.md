@@ -1,4 +1,4 @@
-# PhiltinAnosike.com
+# Philtin Anosike Portfolio
 
 Premium personal brand platform for Philtin Anosike, built with Next.js App Router and designed to communicate calm authority, disciplined leadership, and structured execution.
 
@@ -82,7 +82,7 @@ This project is ready for standard Vercel Git deployment.
 2. Keep the root directory as the repository root.
 3. Allow Vercel to detect the framework as Next.js.
 4. Add the production environment variables from `.env.example`.
-5. Set `NEXT_PUBLIC_SITE_URL` and `APP_URL` to `https://philtinanosike.com` in production.
+5. Set `NEXT_PUBLIC_SITE_URL` and `APP_URL` to your production site URL in production.
 6. Configure preview environment variables as needed for testing provider integrations.
 
 ### Notes
@@ -117,3 +117,4 @@ That tag will trigger the release workflow, verify the app, and publish a GitHub
 ## Repository
 
 - GitHub: `https://github.com/BABAYAGAHH/Philtin-Anosike-Portfolio-.git`
+

@@ -64,20 +64,21 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 border-b px-3 transition-all duration-300 sm:px-4",
         isScrolled || isOpen
-          ? "border-black/[0.08] bg-[rgba(247,243,236,0.92)] shadow-[0_18px_50px_rgba(24,23,21,0.08)] backdrop-blur-2xl"
-          : "border-black/[0.06] bg-[rgba(247,243,236,0.78)] backdrop-blur-xl"
+          ? "border-white/[0.08] bg-[rgba(10,28,21,0.96)] shadow-[0_20px_54px_rgba(5,14,11,0.22)] backdrop-blur-2xl"
+          : "border-white/[0.06] bg-[rgba(10,28,21,0.92)] shadow-[0_12px_32px_rgba(5,14,11,0.16)] backdrop-blur-xl"
       )}
       initial={false}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(18,17,15,0.08),transparent_100%)] opacity-50" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_100%)] opacity-70" />
+      <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-soft-light bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.07)_0,rgba(255,255,255,0.07)_1px,transparent_1px,transparent_10px)]" />
 
       <Container className="relative flex h-[4.9rem] items-center justify-between gap-3">
         <Link className="min-w-0 flex-1 md:flex-none" href="/">
-          <span className="block truncate font-serif text-[1.12rem] leading-none text-foreground sm:text-[1.26rem]">
+          <span className="block truncate font-serif text-[1.12rem] leading-none text-white sm:text-[1.26rem]">
             Philtin Anosike
           </span>
-          <span className="mt-1 hidden text-[0.62rem] uppercase tracking-[0.24em] text-stoneText/[0.72] sm:block">
+          <span className="mt-1 hidden text-[0.62rem] uppercase tracking-[0.24em] text-white/[0.58] sm:block">
             Calm thinking. Structured execution.
           </span>
         </Link>
@@ -86,7 +87,7 @@ export function Navbar() {
           aria-label="Primary"
           className="hidden flex-1 items-center justify-center md:flex"
         >
-          <div className="flex items-center gap-1 rounded-full border border-black/[0.06] bg-white/[0.72] p-1.5 shadow-[0_12px_34px_rgba(24,23,21,0.08)] backdrop-blur">
+          <div className="flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.06] p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur">
             {navigationItems.map((item) => {
               const active = isActive(pathname, item.href);
 
@@ -96,8 +97,8 @@ export function Navbar() {
                   className={cn(
                     "rounded-full px-4 py-2.5 text-sm font-medium tracking-[0.01em] transition",
                     active
-                      ? "bg-[rgb(var(--foreground))] text-white shadow-[0_10px_24px_rgba(24,23,21,0.16)]"
-                      : "text-stoneText hover:bg-white hover:text-foreground"
+                      ? "bg-[linear-gradient(180deg,rgba(246,249,246,0.98),rgba(226,235,228,0.96))] text-[rgb(var(--accent-deep))] shadow-[0_10px_24px_rgba(5,14,11,0.18)]"
+                      : "text-white/[0.74] hover:bg-white/[0.08] hover:text-white"
                   )}
                   href={item.href}
                 >
@@ -109,7 +110,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <PrimaryButton className="min-h-[2.8rem] px-5" href="/contact">
+          <PrimaryButton className="min-h-[2.8rem] px-5 shadow-[0_14px_30px_rgba(5,14,11,0.22)]" href="/contact">
             Contact
           </PrimaryButton>
         </div>
@@ -118,7 +119,7 @@ export function Navbar() {
           aria-controls="mobile-nav"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/[0.08] bg-white/[0.92] px-4 text-foreground shadow-[0_10px_24px_rgba(24,23,21,0.08)] md:hidden"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.08] px-4 text-white shadow-[0_12px_28px_rgba(5,14,11,0.18)] md:hidden"
           onClick={() => setIsOpen((value) => !value)}
           type="button"
         >
@@ -134,20 +135,22 @@ export function Navbar() {
           <>
             <motion.div
               animate={{ opacity: 1 }}
-              className="fixed inset-0 z-40 bg-[rgba(20,19,17,0.34)] backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-[rgba(4,12,9,0.48)] backdrop-blur-sm md:hidden"
               exit={{ opacity: 0 }}
               initial={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
             <motion.aside
               animate={{ x: 0, opacity: 1 }}
-              className="fixed inset-y-4 right-4 z-50 flex w-[min(88vw,24rem)] flex-col rounded-[2.25rem] border border-white/[0.12] bg-[linear-gradient(180deg,#181715_0%,#23211d_100%)] p-6 text-white shadow-2xl md:hidden"
+              className="fixed inset-y-4 right-4 z-50 flex max-h-[calc(100vh-2rem)] w-[min(88vw,24rem)] flex-col overflow-y-auto rounded-[2.25rem] border border-white/[0.1] bg-[linear-gradient(180deg,rgba(9,25,19,0.99),rgba(18,47,35,0.99))] p-6 text-white shadow-[0_28px_72px_rgba(4,12,9,0.42)] md:hidden"
               exit={{ x: 24, opacity: 0 }}
               id="mobile-nav"
               initial={{ x: 32, opacity: 0 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex items-center justify-between">
+              <div className="pointer-events-none absolute inset-0 opacity-30 mix-blend-soft-light bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_28%),repeating-linear-gradient(135deg,rgba(255,255,255,0.07)_0,rgba(255,255,255,0.07)_1px,transparent_1px,transparent_11px)]" />
+
+              <div className="relative flex items-center justify-between">
                 <div>
                   <span className="block font-serif text-xl">Philtin Anosike</span>
                   <span className="mt-1 block text-[0.68rem] uppercase tracking-[0.24em] text-white/[0.55]">
@@ -156,7 +159,7 @@ export function Navbar() {
                 </div>
                 <button
                   aria-label="Close navigation menu"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.08]"
                   onClick={() => setIsOpen(false)}
                   type="button"
                 >
@@ -164,7 +167,7 @@ export function Navbar() {
                 </button>
               </div>
 
-              <div className="mt-10 flex flex-1 flex-col gap-2">
+              <div className="relative mt-10 flex flex-1 flex-col gap-2">
                 {navigationItems.map((item) => {
                   const active = isActive(pathname, item.href);
 
@@ -174,8 +177,8 @@ export function Navbar() {
                       className={cn(
                         "rounded-[1.35rem] border px-4 py-3 text-base transition",
                         active
-                          ? "border-white/0 bg-white text-[rgb(var(--foreground))]"
-                          : "border-white/10 bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
+                          ? "border-white/0 bg-[linear-gradient(180deg,rgba(247,250,247,0.98),rgba(225,234,227,0.96))] text-[rgb(var(--accent-deep))] shadow-[0_10px_24px_rgba(5,14,11,0.18)]"
+                          : "border-white/10 bg-white/[0.08] text-white/[0.82] hover:bg-white/[0.12] hover:text-white"
                       )}
                       href={item.href}
                     >
@@ -185,7 +188,7 @@ export function Navbar() {
                 })}
               </div>
 
-              <div className="mt-8 rounded-[1.6rem] border border-white/10 bg-white/5 p-4">
+              <div className="relative mt-8 rounded-[1.6rem] border border-white/10 bg-white/[0.08] p-4">
                 <p className="text-[0.68rem] uppercase tracking-[0.28em] text-white/[0.55]">
                   Current focus
                 </p>
@@ -194,11 +197,11 @@ export function Navbar() {
                 </p>
               </div>
 
-              <PrimaryButton className="mt-6 w-full" href="/contact">
+              <PrimaryButton className="relative mt-6 w-full" href="/contact">
                 Contact
               </PrimaryButton>
               <Link
-                className="mt-4 text-center text-sm text-white/[0.68] transition hover:text-white"
+                className="relative mt-4 text-center text-sm text-white/[0.68] transition hover:text-white"
                 href="/newsletter"
               >
                 Newsletter
@@ -210,3 +213,4 @@ export function Navbar() {
     </motion.header>
   );
 }
+

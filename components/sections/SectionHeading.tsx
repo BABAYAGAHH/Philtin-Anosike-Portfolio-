@@ -33,7 +33,7 @@ export function SectionHeading({
           )}
         >
           <Badge>{eyebrow}</Badge>
-          <span className="h-px w-16 bg-[linear-gradient(90deg,rgba(175,138,78,0.55),transparent)]" />
+          <span className="h-px w-16 bg-[linear-gradient(90deg,rgba(46,98,71,0.55),transparent)]" />
         </div>
       ) : null}
       <h2 className="max-w-4xl font-serif text-[2.75rem] leading-[0.96] text-foreground sm:text-5xl lg:text-[3.65rem]">

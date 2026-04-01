@@ -36,10 +36,9 @@ export const serverEnv = {
     "http://localhost:3000",
   allowedOrigins: Array.from(new Set(configuredOrigins)),
   emailProvider: process.env.EMAIL_PROVIDER?.trim() || "console",
-  contactEmailTo:
-    process.env.CONTACT_EMAIL_TO?.trim() || "hello@philtinanosike.com",
+  contactEmailTo: process.env.CONTACT_EMAIL_TO?.trim() || "contact@example.com",
   contactEmailFrom:
-    process.env.CONTACT_EMAIL_FROM?.trim() || "noreply@philtinanosike.com",
+    process.env.CONTACT_EMAIL_FROM?.trim() || "noreply@example.com",
   newsletterProvider: process.env.NEWSLETTER_PROVIDER?.trim() || "console",
   newsletterListId: process.env.NEWSLETTER_LIST_ID?.trim() || "",
   rateLimitMode: process.env.RATE_LIMIT_MODE?.trim() || "memory",

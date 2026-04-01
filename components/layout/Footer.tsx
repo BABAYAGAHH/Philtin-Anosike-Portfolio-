@@ -9,7 +9,7 @@ import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export function Footer() {
   return (
-    <footer className="mt-12 border-t border-border/70 bg-[linear-gradient(180deg,rgba(247,243,236,0.96),rgba(237,230,219,0.98))] py-16 sm:py-20">
+    <footer className="mt-12 border-t border-border/70 bg-[linear-gradient(180deg,rgba(224,232,225,0.96),rgba(210,221,212,0.98))] py-16 sm:py-20">
       <Container className="grid gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
         <div className="max-w-xl">
           <p className="text-[0.72rem] uppercase tracking-[0.3em] text-stoneText/[0.64]">
